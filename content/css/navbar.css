@@ -11,7 +11,10 @@
 }
 
 .navbar a:hover {
-  border-bottom: solid 2px var(--secondary-color);
+  border-bottom: solid 4px var(--secondary-color);
+}
+.logo a:hover {
+  border-bottom: none;
 }
 
 .navbar a {
