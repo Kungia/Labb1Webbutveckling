@@ -1,0 +1,16 @@
+#back2Top {
+  width: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  z-index: 999;
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  color: rgb(136, 127, 127);
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+}
+#back2Top:hover {
+  color: #000;
+}
