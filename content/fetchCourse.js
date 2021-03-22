@@ -1,36 +1,63 @@
-const buttonLoadJson = document.querySelector('#btnKurs').addEventListener('click', buttonLoadJsonClicked);
+const buttonLoadKurs = document.querySelector('#btnKurs').addEventListener('click', buttonLoadKursClicked);
+const buttonLoadPop = document.querySelector('#btnPop').addEventListener('click', buttonLoadPopClicked);
 const spinner = document.querySelector('#spinner');
 
-const displayView = document.querySelector('#display');
+const displayKursView = document.querySelector('#displayKurs');
+const displayPopView = document.querySelector('#displayPop');
 
-/* async nyckelordet gör att funktionen nu returnerar ett "Promise"*/
 
-//Hämta lokal json fil...
-async function getJson() {
+async function getKurs() {
   spinner.classList.remove('hidden');
-  const response = await fetch('./content/allCourses.json');
+  const responsekurs = await fetch('./content/allCourses.json');
 
-  if (!response.ok) throw new Error(response.statusText);
+  if (!responsekurs.ok) throw new Error(response.statusText);
 
-  return await response.json();
+  return await responsekurs.json();
 }
 
-function buttonLoadJsonClicked() {
-  getJson()
+async function getPop() {
+    spinner.classList.remove('hidden');
+    const responsePop = await fetch('./content/popCourses.json');
+  
+    if (!responsePop.ok) throw new Error(responsepop.statusText);
+  
+    return await responsePop.json();
+}
+
+
+function buttonLoadKursClicked() {
+  getKurs()
     .then(data => {
-      let html = '';
+      let  kurshtml = '';
 
       data.forEach(function (course) {
-        html += `<div>${course.id} <span>${course.title}</span></br><span><i>${course.description}</i></span></br><span>${course.length}</span></div>`;
+        kurshtml += `<div>${course.id} <span>${course.title}</span></br><span><i>${course.description}</i></span></br><span>${course.length}</span></div>`
       });
-      renderHtml(html);
+      renderKursHtml(kurshtml);
 
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log(err));  
 }
 
+function buttonLoadPopClicked() {
+    getPop()
+      .then(data => {
+        let pophtml = '';
+  
+        data.forEach(function (course) {
+          pophtml += `<div>${course.id} <span>${course.title}</span></br><span><i>${course.description}</i></span></br><span>${course.length}</span></div>`
+        });
+        renderPopHtml(pophtml);
+  
+      })
+      .catch(err => console.log(err));
+  }
 
-function renderHtml(html){
+function renderKursHtml(kurshtml){
   spinner.classList.add('hidden');
-  displayView.innerHTML = html;
+  displayKursView.innerHTML = kurshtml;
 }
+function renderPopHtml(pophtml){
+    spinner.classList.add('hidden');
+    displayPopView.innerHTML = pophtml;
+  }

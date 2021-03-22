@@ -1,3 +1,21 @@
+.kurssida {
+  background: url(/content/Img/workingcomp.jpg) no-repeat center center/cover;
+  display: inline-flexbox;
+  height: 150vh;
+  position: relative;
+  color: var(--dark-color);
+  padding: 3rem;
+}
+
+.row {
+  padding-top: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  opacity: 0.9;
+  min-height: 30vh;
+}
 .displayArea {
   display: flex;
   justify-content: center;
@@ -26,9 +44,8 @@
 }
 
 #spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: bottom;
+  padding: 1rem;
   transform: translate(-50%, -50%);
   z-index: 1;
 }
