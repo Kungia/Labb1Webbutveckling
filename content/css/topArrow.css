@@ -6,11 +6,16 @@
   position: fixed;
   bottom: 50px;
   right: 0;
-  color: rgb(136, 127, 127);
+  color: var(--accent-color);
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   text-decoration: none;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.2s ease;
+  margin-right: 10px;
 }
 #back2Top:hover {
-  color: #000;
+  color: var(--secondary-color);
+  transition: 0.2s ease;
 }

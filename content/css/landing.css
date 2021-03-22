@@ -4,7 +4,6 @@
   height: 100vh;
   position: relative;
   color: var(--dark-color);
-  /* opacity: 0.9; */
 }
 
 .landing .content {

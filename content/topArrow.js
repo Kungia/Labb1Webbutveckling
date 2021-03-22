@@ -1,7 +1,6 @@
 
  mybutton = document.getElementById("back2Top");
 
-//visar knappen efter att du scrollat ner 20.
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
