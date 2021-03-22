@@ -10,30 +10,71 @@
   <link rel="stylesheet" href="./content/css/landing.css">
   <link rel="stylesheet" href="./content/css/styles.css">
   <link rel="stylesheet" href="./content/css/topArrow.css">
+  <link rel="stylesheet" href ="./content/css/courses.css">
   <link rel="stylesheet" media="screen and (max-width: 768px)" href="./content/css/mobile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico"> <!---funkar inte?--->
   <title>WestCoast Education</title>
 </head>
 <body>
-  <header class="landing">
+  <header>
     <div id="navbar" class="navbar">
       <h1 class="logo">
-       <a href="kursöversikt.html">WestCoast Education</a>
+        <a href="Startsida.html">WestCoast Education</a>
       </h1>
       <ul>
         <li><a href="Startsida.html">Om WestCoast Education</a></li>
         <li><a href="kursöversikt.html">Kursöversikt</a></li>
       </ul>
     </div>
-  </header>
-
-
-    <footer class="bg-dark">
+    <main>  
+      <div class="container">
+        <div class="deck">
+          <div id="card" class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Alla Kurser</h5>
+                 <p class="card-text">Klicka på knappen för att se en lista på alla kurser vi erbjuder.</p>
+                  <button class="btn btn-primary" id="btnKurs">Kursöversikt</button>  
+                  <!---coursedisplay--->
+                  <section class="displayArea">
+                    <div id="display"></div>
+                    <div id="spinner" class="hidden">
+                      <img src="/content/Img/loadinggif.gif" alt="">
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+             <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Populära Kurser</h5>
+                  <p class="card-text">Vissa av våra kurser är extra populära och har som regel en kursstart varannan månad.</p>
+                  <button class="btn btn-primary" id="btnKurs">Populära kurser</button>  
+                  <!---coursedisplay--->
+                  <section class="displayArea">
+                   <div id="display"></div>
+                    <div id="spinner" class="hidden">
+                      <img src="/content/Img/loadinggif.gif" alt="">
+                    </div>
+                  </section>
+               </div>
+             </div>
+            </div>
+         </div>
+      </div>
+     </main>
+ 
+    <script src="/content/fetchCourse.js"></script>   
+</body>
+<footer class="bg-dark">
       <p>WestCoast Education &copy;2021, All Rights Reserved</p>
 
        <!-- UpToTopArrow-->
        <i onclick = topFunction() id="back2Top" class="fas fa-arrow-circle-up" title="Back to top"></i>
 <script src="/content/topArrow.js"></script>
     </footer>
-</body>
 </html>
