@@ -11,8 +11,8 @@ async function getKurs() {
   const responsekurs = await fetch('./content/allCourses.json');
 
   if (!responsekurs.ok) throw new Error(response.statusText);
-
   return await responsekurs.json();
+  
 }
 
 async function getPop() {
@@ -20,10 +20,9 @@ async function getPop() {
     const responsePop = await fetch('./content/popCourses.json');
   
     if (!responsePop.ok) throw new Error(responsepop.statusText);
-  
+    
     return await responsePop.json();
 }
-
 
 function buttonLoadKursClicked() {
   getKurs()
@@ -31,10 +30,9 @@ function buttonLoadKursClicked() {
       let  kurshtml = '';
 
       data.forEach(function (course) {
-        kurshtml += `<div>${course.id} <span>${course.title}</span></br><span><i>${course.description}</i></span></br><span>${course.length}</span></div>`
+        kurshtml += `<div></br>${course.id} <span><b>${course.title}</b></span></br><span><i>${course.description}</i></span></br><span>${course.length+"p"}</span></div>`
       });
       renderKursHtml(kurshtml);
-
     })
     .catch(err => console.log(err));  
 }
@@ -45,7 +43,7 @@ function buttonLoadPopClicked() {
         let pophtml = '';
   
         data.forEach(function (course) {
-          pophtml += `<div>${course.id} <span>${course.title}</span></br><span><i>${course.description}</i></span></br><span>${course.length}</span></div>`
+          pophtml += `<div></br>${course.id} <span><b>${course.title}</b></span></br><span><i>${course.description}</i></span></br><span>${course.length+"p"}</span></div>`
         });
         renderPopHtml(pophtml);
   

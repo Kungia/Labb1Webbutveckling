@@ -1,7 +1,7 @@
 .kurssida {
   background: url(/content/Img/workingcomp.jpg) no-repeat center center/cover;
   display: inline-flexbox;
-  height: 150vh;
+  min-height: 150vh;
   position: relative;
   color: var(--dark-color);
   padding: 3rem;
@@ -13,8 +13,11 @@
 
 .card {
   background-color: #fff;
-  opacity: 0.9;
-  min-height: 30vh;
+  opacity: 0.8;
+  min-height: 40vh;
+  margin-left: 15%;
+  margin-right: 15%;
+  justify-content: space-evenly;
 }
 .displayArea {
   display: flex;
@@ -35,7 +38,7 @@
 
 #display div {
   padding: 10px 15px;
-  border: solid 1px #aaa8a8;
+  border: solid 1px var(--secondary-color);
   border-radius: 5px;
 }
 
@@ -48,4 +51,18 @@
   padding: 1rem;
   transform: translate(-50%, -50%);
   z-index: 1;
+}
+
+#btnKurs {
+  margin-top: 2rem;
+  position: relative;
+  top: 75%;
+  left: 25%;
+}
+
+#btnPop {
+  margin-top: 2rem;
+  position: relative;
+  top: 75%;
+  left: 25%;
 }
