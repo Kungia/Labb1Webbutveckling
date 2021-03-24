@@ -7,16 +7,20 @@ const displayPopView = document.querySelector('#displayPop');
 
 
 async function getKurs() {
-  spinner.classList.remove('hidden');
-  const responsekurs = await fetch('./content/allCourses.json');
+ // spinner.classList.remove('hidden');
+  document.getElementById("displayPop").innerHTML="";
 
-  if (!responsekurs.ok) throw new Error(response.statusText);
-  return await responsekurs.json();
+  const responsekurs = await fetch('./content/allCourses.json');
   
+  if (!responsekurs.ok) throw new Error(response.statusText);
+
+  return await responsekurs.json();
 }
 
 async function getPop() {
-    spinner.classList.remove('hidden');
+    //spinner.classList.remove('hidden');
+    document.getElementById("displayKurs").innerHTML="";
+
     const responsePop = await fetch('./content/popCourses.json');
   
     if (!responsePop.ok) throw new Error(responsepop.statusText);
@@ -52,10 +56,27 @@ function buttonLoadPopClicked() {
   }
 
 function renderKursHtml(kurshtml){
+  if  (!document.getElementById("displayKurs").innerHTML=="")
+  {
+    document.getElementById("displayKurs").innerHTML="";
+  }
+
+  else
+  {
   spinner.classList.add('hidden');
   displayKursView.innerHTML = kurshtml;
+  }
+  
 }
 function renderPopHtml(pophtml){
+  if  (!document.getElementById("displayPop").innerHTML=="")
+  {
+    document.getElementById("displayPop").innerHTML="";
+  }
+
+  else
+  {
     spinner.classList.add('hidden');
     displayPopView.innerHTML = pophtml;
   }
+} 
