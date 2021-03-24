@@ -7,7 +7,6 @@ const displayPopView = document.querySelector('#displayPop');
 
 
 async function getKurs() {
- // spinner.classList.remove('hidden');
   document.getElementById("displayPop").innerHTML="";
 
   const responsekurs = await fetch('./content/allCourses.json');
@@ -18,7 +17,6 @@ async function getKurs() {
 }
 
 async function getPop() {
-    //spinner.classList.remove('hidden');
     document.getElementById("displayKurs").innerHTML="";
 
     const responsePop = await fetch('./content/popCourses.json');
@@ -63,7 +61,6 @@ function renderKursHtml(kurshtml){
 
   else
   {
-  spinner.classList.add('hidden');
   displayKursView.innerHTML = kurshtml;
   }
   
@@ -76,7 +73,6 @@ function renderPopHtml(pophtml){
 
   else
   {
-    spinner.classList.add('hidden');
     displayPopView.innerHTML = pophtml;
   }
 } 
