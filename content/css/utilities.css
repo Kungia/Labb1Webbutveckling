@@ -6,6 +6,7 @@
   color: var(--secondary-color);
 }
 
+.btn-primary .btn,
 .prim:hover {
   opacity: 0.9;
   background-color: var(--accent-color);

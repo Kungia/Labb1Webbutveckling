@@ -1,75 +1,60 @@
-.navbar {
-  flex-direction: row;
-  position: relative;
-  height: 7.5rem;
-  padding: 2rem;
-}
-
-.navbar a {
-  padding: 0.6rem;
-  margin: 0 3px;
-}
-
-.flex-items {
-  flex-direction: column;
-}
-
-.flex-columns .column,
-.flex-grid .column {
-  flex: 100%;
-  max-width: 100%;
-}
-
-.landing .kurssida .content h1 {
-  font-size: 1.5rem;
-}
-
-.landing .kurssida .content p {
-  font-size: 1.2rem;
-}
-
-@media (max-width: 410px) {
-  .navbar {
+@media (max-width: 768px) {
+  .navigation {
     flex-direction: column;
-    height: 8rem;
-    padding: 1rem;
-    padding-top: 2rem;
+    position: relative;
+    height: 7.5rem;
+    width: 100%;
+    padding: 2rem;
+    border-bottom: none;
   }
-  .navbar a {
-    padding: 0.6rem;
-    margin: 0 3px;
+
+  #back2Top {
+    margin-right: 1.5rem;
   }
   .flex-items {
     flex-direction: column;
   }
+
   .flex-columns .column,
   .flex-grid .column {
     flex: 100%;
     max-width: 100%;
   }
-  .landing .content h1 {
+
+  .landing .kurssida .content h1 {
     font-size: 1.5rem;
   }
-  .landing .content p {
+
+  .landing .kurssida .content p {
     font-size: 1.2rem;
   }
 }
 
-@media (max-width: 370px) {
-  .navbar {
-    display: flex;
+@media (max-width: 410px) {
+  .navigation {
     flex-direction: column;
-    height: 9rem;
+    position: relative;
+    height: 8rem;
+    width: 100%;
     padding: 1rem;
     padding-top: 2rem;
   }
-  .navbar a {
-    padding: 0.5rem;
+  .navigation a {
+    padding: 0.6rem;
     margin: 0 3px;
   }
   .logo {
     font-size: 25px;
+    font-weight: bolder;
   }
+  .kurssida {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    margin-bottom: 1rem;
+  }
+
   .flex-items {
     flex-direction: column;
   }
@@ -78,10 +63,70 @@
     flex: 100%;
     max-width: 100%;
   }
-  .landing .content h1 {
-    font-size: 1.5rem;
+  .startpage h1 {
+    font-size: 35px !important;
   }
-  .landing .content p {
-    font-size: 1.2rem;
+  .startpage {
+    padding: 2rem;
+  }
+  .startpage p {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navigation {
+    flex-direction: column;
+    position: relative;
+    height: 8rem;
+    padding-top: 1rem;
+  }
+  .navigation a {
+    padding: 0.6rem;
+    margin: 0 3px;
+    font-size: 15px;
+  }
+  .landing {
+    max-height: 150vh;
+    width: 360px;
+  }
+  .landing::before {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 150vh;
+    background: var(--light-color);
+    opacity: 0.6;
+  }
+  .logo h1 a {
+    font-size: 50px;
+    font-weight: bolder;
+    padding-top: 0.5;
+  }
+
+  .kurssida {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .flex-items {
+    flex-direction: column;
+  }
+  .flex-columns .column,
+  .flex-grid .column {
+    flex: 100%;
+    max-width: 360px;
+  }
+  .startpage h1 {
+    font-size: 35px !important;
+  }
+  .startpage {
+    padding: 2rem;
+  }
+  .startpage p {
+    font-size: 25px;
   }
 }
