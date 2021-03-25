@@ -7,7 +7,6 @@ const displayPopView = document.querySelector('#displayPop');
 
 
 async function getKurs() {
-  document.getElementById("displayPop").innerHTML="";
 
   const responsekurs = await fetch('./content/allCourses.json');
   
@@ -17,7 +16,6 @@ async function getKurs() {
 }
 
 async function getPop() {
-    document.getElementById("displayKurs").innerHTML="";
 
     const responsePop = await fetch('./content/popCourses.json');
   
