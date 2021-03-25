@@ -22,7 +22,7 @@
   padding: 1.2rem;
   font-size: 20px;
 }
-#btnKurs #btnPop.btn-primary .btn,
+#btnKurs #btnPop .btn-primary .btn,
 .prim {
   color: var(--light-color);
   background-color: var(--primary-color);
@@ -32,6 +32,8 @@
   padding-left: 2rem;
   padding-right: 2rem;
   font-size: 15px;
+  opacity: 1;
+  z-index: 1000 !important;
 }
 
 /* Flex items */

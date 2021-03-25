@@ -17,22 +17,15 @@
   min-height: 130vh;
 }
 
-/*.row {
-}*/
-
 .card {
   background-color: #fff;
-  opacity: 0.8;
   min-height: 40vh;
   margin-left: 15%;
   margin-right: 15%;
   padding-right: 0rem;
   justify-content: space-evenly;
 }
-.col-sm-6 {
-  padding: 0rem;
-  margin: 0rem;
-}
+
 .displayArea {
   display: flex;
   justify-content: center;
