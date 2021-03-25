@@ -6,21 +6,21 @@
   color: var(--secondary-color);
 }
 
-.btn {
+.btn-primary .btn {
   cursor: pointer;
   display: inline-block;
-  padding: 0.8rem 2rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 10px;
 }
 
-.btn:hover {
+.btn-primary .btn:hover {
   opacity: 0.9;
   background-color: var(--accent-color);
   transition: 0.4s ease;
 }
 
-.btn-primary,
+.btn-primary .btn,
 .bg-primary {
   color: var(--light-color);
   background-color: var(--primary-color);
@@ -32,25 +32,6 @@
   color: var(--light-color);
   background-color: var(--secondary-color);
 }
-
-.btn-dark,
-.bg-dark {
-  color: var(--light-color);
-  background-color: var(--dark-color);
-}
-
-.btn-light,
-.bg-light {
-  color: var(--dark-color);
-  background-color: var(--light-color);
-}
-
-.btn-outline {
-  background: transparent;
-  border: solid 1px var(--light-color);
-  color: var(--light-color);
-}
-
 /* Flex items */
 .flex-items {
   display: flex;
@@ -67,6 +48,7 @@
 /* Flex columns */
 .flex-columns.flex-reverse .row {
   flex-direction: row-reverse;
+  padding: 0;
 }
 
 .flex-columns .row {
@@ -101,6 +83,9 @@
   justify-content: center;
   padding: 2rem;
 }
+.column-right.bg-primary {
+  background-color: var(--primary-color);
+}
 
 .flex-columns h2 {
   font-size: 2.4rem;
@@ -113,36 +98,4 @@
 
 .flex-columns p {
   margin: 1.4rem 0;
-}
-
-/* Section header */
-.section-header {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.section-header h2 {
-  font-size: 2.4rem;
-  margin: 1.3rem;
-}
-
-.section-padding {
-  padding: 1.4rem 1.4rem 2.4rem;
-}
-
-/* Flex grid */
-.flex-grid .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 2.4rem;
-}
-
-.flex-grid .column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 0.4rem;
 }

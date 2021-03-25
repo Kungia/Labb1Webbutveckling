@@ -1,15 +1,23 @@
 .kurssida {
   background: url(/content/Img/workingcomp.jpg) no-repeat center center/cover;
-  display: inline-flexbox;
   min-height: 150vh;
+  display: inline-flexbox;
   position: relative;
   color: var(--dark-color);
-  padding: 3rem;
 }
 
-.row {
-  padding-top: 1rem;
+.kurscontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 5rem;
+  text-align: center;
+  min-height: 130vh;
 }
+
+/*.row {
+}*/
 
 .card {
   background-color: #fff;
@@ -57,12 +65,10 @@
   margin-top: 2rem;
   position: relative;
   top: 75%;
-  left: 25%;
 }
 
 #btnPop {
   margin-top: 2rem;
   position: relative;
   top: 75%;
-  left: 25%;
 }

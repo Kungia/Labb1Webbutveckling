@@ -1,5 +1,6 @@
 .navbar {
-  flex-direction: column;
+  flex-direction: row;
+  position: relative;
   height: 7.5rem;
   padding: 2rem;
 }
@@ -19,11 +20,11 @@
   max-width: 100%;
 }
 
-.landing .content h1 {
+.landing .kurssida .content h1 {
   font-size: 1.5rem;
 }
 
-.landing .content p {
+.landing .kurssida .content p {
   font-size: 1.2rem;
 }
 

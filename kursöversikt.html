@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <link rel="stylesheet" href="./content/css/colors.css">
   <link rel="stylesheet" href="./content/css/utilities.css">
   <link rel="stylesheet" href="./content/css/navigation.css">
@@ -17,14 +13,12 @@
   <link rel="stylesheet" href="./content/css/styles.css">
   <link rel="stylesheet" href="./content/css/topArrow.css">
   <link rel="stylesheet" href="./content/css/courses.css">
-  <link rel="stylesheet" href="content/css/mobile.css">
-  <link rel="stylesheet" media="screen and (max-width: 768px)" href="./content/css/mobile.css">
-
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="content/css/mobile.css">
   <title>WestCoast Education</title>
 </head>
-<body>
-  <header >
-    <div  class="navigation">
+<body class=kurssida>
+  <header id="nav">
+    <div class="navigation">
       <h1 class="logo">
         <a href="Startsida.html">WestCoast Education</a>
       </h1>
@@ -35,7 +29,7 @@
     </div>
   </header>
 
-  <section class="kurssida">
+  <section class="kurscontent">
     <div class="row">
       <div class="col-sm-6">
         <div class="card">
@@ -46,7 +40,7 @@
             <button class="btn btn-primary" id="btnKurs">Kursöversikt</button>
 
             <!---coursedisplay--->
-            <section class="displayArea">
+            <section class="displayArea content">
               <div id="displayKurs"></div>
               <div id="spinner" class="hidden">
                 <img src="/content/Img/loadinggif.gif" alt="">
@@ -60,7 +54,7 @@
             <h3 class="card-title">Populära kurser</h3>
             <p class="card-text">Här listar vi de mest populära kurserna vi har. Dessa kurser har flera kursstarter per
               termin och finns i flera olika studieformat. Vi gör allt för att du ska klara studierna</p>
-            <button class="btn btn-primary" id="btnPop">Populära Kurser</button>
+            <button class=" btn btn-primary" id="btnPop">Populära Kurser</button>
 
             <!---coursedisplay--->
             <section class="displayArea">
@@ -73,10 +67,7 @@
       </div>
     </div>
   </section>
-
   <script src="/content/fetchCourse.js"></script>
-
-
 </body>
 <footer class="bg-dark">
   <p>WestCoast Education &copy;2021, All Rights Reserved</p>
@@ -85,5 +76,4 @@
   <i onclick=topFunction() id="back2Top" class="fas fa-arrow-circle-up" title="Back to top"></i>
   <script src="/content/topArrow.js"></script>
 </footer>
-
 </html>
