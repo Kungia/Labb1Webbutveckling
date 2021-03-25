@@ -32,7 +32,7 @@ function buttonLoadKursClicked() {
       let  kurshtml = '';
 
       data.forEach(function (course) {
-        kurshtml += `<div></br>${course.id} <span><b>${course.title}</b></span></br><span><i>${course.description}</i></span></br><span>${course.length+"p"}</span></div>`
+        kurshtml += `<div></br><span id="id">${course.id}</span> <span><b>${course.title}</b></span></br><span><i>${course.description}</i></span></br><span>${course.length+"p"}</span></div>`
       });
       renderKursHtml(kurshtml);
     })
@@ -45,7 +45,7 @@ function buttonLoadPopClicked() {
         let pophtml = '';
   
         data.forEach(function (course) {
-          pophtml += `<div></br>${course.id} <span><b>${course.title}</b></span></br><span><i>${course.description}</i></span></br><span>${course.length+"p"}</span></div>`
+          pophtml += `<div></br><span id="id">${course.id}</span> <span><b>${course.title}</b></span></br><span><i>${course.description}</i></span></br><span>${course.length+"p"}</span></div>`
         });
         renderPopHtml(pophtml);
   

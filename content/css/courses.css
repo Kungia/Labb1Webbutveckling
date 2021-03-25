@@ -31,6 +31,13 @@
   display: flex;
   justify-content: center;
 }
+.displayArea #id {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 20px;
+  border-right: 3px groove var(--primary-color);
+  padding-right: 0.5rem;
+}
 
 .hidden {
   display: none;

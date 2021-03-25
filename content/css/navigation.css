@@ -8,13 +8,17 @@
   width: 100%;
   padding: 1rem;
   padding-right: 1.5rem;
-  padding-bottom: 1.4rem;
+  padding-bottom: 1rem;
 }
 
 #nav .navigation a:hover {
   text-decoration: none;
   border-bottom: solid 4px var(--secondary-color);
   transition: 0.4s ease;
+}
+#nav .navigation .logo a:hover {
+  text-decoration: none;
+  border-bottom: none;
 }
 
 #nav .navigation a {
